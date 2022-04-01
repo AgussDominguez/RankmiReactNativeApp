@@ -2,9 +2,6 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    width: '100%',
-    height: '100%',
-    backgroundColor: 'rgba(243, 246, 255, .5)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -33,7 +30,7 @@ export default StyleSheet.create({
   submitButton: {
     marginTop: 4,
     paddingHorizontal: 15,
-    paddingVertical: 8,
+    paddingVertical: 6,
     backgroundColor: '#2684ff',
     borderRadius: 5,
   },

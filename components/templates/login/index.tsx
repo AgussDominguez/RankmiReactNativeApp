@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Image, Linking, Pressable, Text, View} from 'react-native';
+import {Alert, Image, Linking, Pressable, Text, View} from 'react-native';
 import styles from './Login.template.style';
 import Input from './../../../ui/Input';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
@@ -24,8 +24,12 @@ const LoginTemplate: React.FC = () => {
             onChange={setDomain}
             suffix=".rankmi.com"
             placeholder="miempresa"
+            noEnpty
           />
-          <Pressable style={styles.submitButton}>
+          <Pressable
+            style={styles.submitButton}
+            onPress={() => Alert.alert(domain)}
+            disabled={!domain.length}>
             <Text style={styles.submitButtonText}>Continuar</Text>
           </Pressable>
           <Text
@@ -36,7 +40,11 @@ const LoginTemplate: React.FC = () => {
               )
             }>
             {'¿Qué es el dominio de empresa? '}
-            <FontAwesomeIcon icon={faQuestionCircle} size={14} />
+            <FontAwesomeIcon
+              icon={faQuestionCircle}
+              size={14}
+              color={'#213f68'}
+            />
           </Text>
         </View>
       </View>
