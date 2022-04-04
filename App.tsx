@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StatusBar, StyleSheet} from 'react-native';
 import WebView from 'react-native-webview';
-import LoginTemplate from './components/templates/login';
+import DomainTemplate from './components/templates/login/login/components/template/domain';
 
 const App: React.FC = () => {
   const token: string = ''; //TODO: get token
@@ -11,7 +11,7 @@ const App: React.FC = () => {
       {!token ? (
         <>
           <StatusBar backgroundColor="#F3F6FE" barStyle={'dark-content'} />
-          <LoginTemplate />
+          <DomainTemplate />
         </>
       ) : (
         <WebView source={{uri: 'https://app.rankmi.com/'}} />
