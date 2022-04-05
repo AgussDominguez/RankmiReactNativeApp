@@ -2,10 +2,14 @@ import React from 'react';
 import DomainCard from '../../organims/DomainCard';
 import {View, StyleSheet} from 'react-native';
 
-const DomainTemplate: React.FC = () => {
+interface IProps {
+  onSubdomainSelected: (subdomain: string) => void;
+}
+
+const DomainTemplate: React.FC<IProps> = ({onSubdomainSelected}) => {
   return (
     <View style={styles.container}>
-      <DomainCard />
+      <DomainCard onSubdomainSelected={onSubdomainSelected} />
     </View>
   );
 };

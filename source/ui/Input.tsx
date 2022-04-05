@@ -29,7 +29,7 @@ const Input: React.FC<Props> = ({
   suffix,
   noEnpty,
 }) => {
-  const [isFocused, setIsFocused] = useState(false);
+  const [isFocused, setIsFocused] = useState(false); /* TODO: Añadir tipado */
   let isError = false;
 
   if (isFocused && noEnpty && !value.length) {

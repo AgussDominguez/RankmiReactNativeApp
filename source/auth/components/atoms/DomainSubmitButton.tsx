@@ -1,16 +1,21 @@
 import React from 'react';
-import {Text, StyleSheet, Pressable, Alert} from 'react-native';
+import {Text, StyleSheet, Pressable} from 'react-native';
 
 interface Props {
   buttonTitle: string;
   domain: string;
+  onSubmit: (subdomain: string) => void;
 }
 
-const DomainSubmitButton: React.FC<Props> = ({buttonTitle, domain}) => {
+const DomainSubmitButton: React.FC<Props> = ({
+  buttonTitle,
+  domain,
+  onSubmit,
+}) => {
   return (
     <Pressable
       style={styles.submitButton}
-      onPress={() => Alert.alert(domain)}
+      onPress={() => onSubmit(domain)}
       disabled={!domain.length}>
       <Text style={styles.submitButtonText}>{buttonTitle}</Text>
     </Pressable>

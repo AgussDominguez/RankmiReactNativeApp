@@ -4,11 +4,19 @@ import DomainHeader from '../molecules/domainHeader';
 import DomainForm from '../molecules/domainForm';
 import DomainHelpInfo from '../molecules/domainHelpInfo';
 
-const DomainCard: React.FC = () => {
+interface IProps {
+  onSubdomainSelected: (subdomain: string) => void;
+}
+
+const DomainCard: React.FC<IProps> = ({onSubdomainSelected}) => {
+  const handleClick = (domain: string) => {
+    onSubdomainSelected(domain.toLowerCase());
+  };
+
   return (
     <View style={styles.domainCard}>
       <DomainHeader />
-      <DomainForm />
+      <DomainForm onSubmit={handleClick} />
       <DomainHelpInfo />
     </View>
   );
