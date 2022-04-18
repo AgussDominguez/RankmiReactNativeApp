@@ -2,11 +2,11 @@ import React from 'react';
 import {Image, StyleSheet} from 'react-native';
 
 const DomainHeader: React.FC = () => {
-  const item = {
-    image: require('../../images/logo-rkm.png'),
+  const rankmiLogo = {
+    src: require('../../images/logo-rkm.png'),
   };
 
-  return <Image source={item.image} style={styles.logo} />;
+  return <Image source={rankmiLogo.src} style={styles.logo} />;
 };
 
 const styles = StyleSheet.create({

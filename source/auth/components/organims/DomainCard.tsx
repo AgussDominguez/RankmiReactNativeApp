@@ -6,18 +6,21 @@ import DomainHelpInfo from '../molecules/domainHelpInfo';
 
 interface IProps {
   onSubdomainSelected: (subdomain: string) => void;
+  t: any;
 }
 
-const DomainCard: React.FC<IProps> = ({onSubdomainSelected}) => {
+const DomainCard: React.FC<IProps> = ({onSubdomainSelected, t}) => {
   const handleClick = (domain: string) => {
-    onSubdomainSelected(domain.toLowerCase());
+    if (domain) {
+      onSubdomainSelected(domain.toLowerCase());
+    }
   };
 
   return (
     <View style={styles.domainCard}>
       <DomainHeader />
-      <DomainForm onSubmit={handleClick} />
-      <DomainHelpInfo />
+      <DomainForm onSubmit={handleClick} t={t} />
+      <DomainHelpInfo t={t} />
     </View>
   );
 };
@@ -25,9 +28,10 @@ const DomainCard: React.FC<IProps> = ({onSubdomainSelected}) => {
 const styles = StyleSheet.create({
   domainCard: {
     width: '100%',
-    backgroundColor: '#fff',
     padding: 20,
     borderRadius: 6,
+    alignSelf: 'center',
+    backgroundColor: '#fff',
   },
 });
 

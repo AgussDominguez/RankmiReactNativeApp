@@ -1,10 +1,12 @@
+import i18n from '../../../i18n/i18n.config';
+import {ILang} from './language-selection';
 interface IEnterpriseData {
   logo: string;
   name: string;
   login_logo: string;
   login_bg_image: string;
-  head_translate: any /* ILang[]; TODO: Traducciones*/;
-  help_information_translate: any /* ILang[]; TODO: Traducciones*/;
+  head_translate: ILang[];
+  help_information_translate: ILang[];
   enable_intercom_on_login: boolean;
   custom_domain: string;
   allow_google_signin: boolean;
@@ -16,7 +18,7 @@ interface IEnterpriseData {
   status: string;
   slug_enterprise_name: string;
   include_email_recovery: boolean;
-  keycloak_keys: any /* ILang[]; TODO: añadir modelo */;
+  keycloak_keys: ILang[];
   enable_master_auth: any;
   tenant_token: any;
   azure_ad_connection: any;
@@ -28,10 +30,10 @@ class EnterpriseConfiguration {
   loginLogo: string;
   bgImage: string;
   status: string;
-  title: any /* ILang[]; TODO: Traducciones*/;
+  title: any;
   enterpriseName: string;
   loginForm: boolean;
-  complementaryInformation: any /* ILang[]; TODO: Traducciones*/;
+  complementaryInformation: any;
   resetPassword: boolean;
   intercomOnLogin: boolean;
   allowGoogleSignin: boolean;
@@ -39,7 +41,7 @@ class EnterpriseConfiguration {
   allowFormUserPassSignin: boolean;
   allowKeycloakSignin: boolean;
   isEngagementSubdomain: boolean;
-  keycloakKeys: any /* ILang[]; TODO: añadir modelo */;
+  keycloakKeys: ILang[];
   customDomain: string;
   enableMasterAuth: boolean;
   enterpriseToken: string;
@@ -68,6 +70,18 @@ class EnterpriseConfiguration {
     this.enableMasterAuth = data.enable_master_auth;
     this.enterpriseToken = data.tenant_token;
     this.azureADConnection = data.azure_ad_connection;
+  }
+  getComplementaryInformationTranslate(): string {
+    if (this.complementaryInformation) {
+      return this.complementaryInformation[i18n.language];
+    }
+    return '';
+  }
+  getTitleTranslate(): string {
+    if (this.title) {
+      return this.title[i18n.language];
+    }
+    return '';
   }
 }
 

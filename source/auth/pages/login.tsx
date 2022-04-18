@@ -1,12 +1,20 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import DomainTemplate from '../components/template/domain';
 import LoginTemplate from '../components/template/login';
 import {fetchEnterpriseConfiguration} from '../services/enterpriseLogin.service';
+import {
+  clearEnterpriseInformation,
+  setEnterpriseData,
+} from '../services/enterprise-configuration.service';
 import EnterpriseConfiguration from '../models/enterprise-configuration';
-import {Text} from 'react-native';
+import Loader from '../../ui/loader/Loader';
+import {BackHandler} from 'react-native';
 
-const LoginPage: React.FC = () => {
-  const [error, setError] = useState<Error>();
+interface Props {
+  refreshHome: () => void;
+}
+
+const LoginPage: React.FC<Props> = ({refreshHome}) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [enterpriseConfig, setEnterpriseConfig] =
     useState<EnterpriseConfiguration>();
@@ -16,24 +24,40 @@ const LoginPage: React.FC = () => {
     fetchEnterpriseConfiguration(subdomain)
       .then(response => {
         setLoading(false);
-
         setEnterpriseConfig(response);
+        setEnterpriseData(response);
       })
       .catch(err => {
-        setError(err);
         setLoading(false);
+        console.log('err', err); /* TODO: Error handler */
       });
   };
+
+  useEffect(() => {
+    const backAction = () => {
+      setEnterpriseConfig(undefined);
+      clearEnterpriseInformation();
+      BackHandler.exitApp();
+      return true;
+    };
+
+    const backHandler = BackHandler.addEventListener(
+      'hardwareBackPress',
+      backAction,
+    );
+
+    return () => backHandler.remove();
+  }, []);
+
   if (enterpriseConfig) {
-    return <LoginTemplate />;
-  }
-  if (error) {
-    console.log(error);
+    return (
+      <LoginTemplate enterprise={enterpriseConfig} refreshHome={refreshHome} />
+    );
   }
   return (
     <>
       <DomainTemplate onSubdomainSelected={validateSubdomain} />
-      {loading && <Text>loading...</Text>}
+      {loading && <Loader overlay size={80} />}
     </>
   );
 };

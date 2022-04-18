@@ -1,0 +1,47 @@
+{
+  "langs": {
+    "es": "Spanisch",
+    "en": "Englisch",
+    "pt": "Portugiesisch",
+    "fr": "Französisch",
+    "de": "Deutsche",
+    "pl": "Polnische"
+  },
+  "login": {
+    "newLogin": {
+      "subdomain": {
+        "changeEnterpriseBtn": "Ändern unternehmen",
+        "helpButton": "Was ist ein unternehmen herrschaft?",
+        "inputEmpty": "Dieses feld kann nicht leer sein",
+        "inputMessage": "Der domain-name existiert nicht",
+        "label": "Geben sie ihr unternehmen domain-namen",
+        "placeholder": "Meine firma",
+        "sendButton": "Fortsetzen"
+      }
+    },
+    "formLogin": {
+      "btnSend": "Anmelden",
+      "btnGoogle": "Mit Google anmelden",
+      "btnAzureAd": "Mit Azure Active Directory anmelden",
+      "forgotPass": "Haben Sie Ihr Passwort vergessen?",
+      "sms_code": "Über SMS-Code eingeben",
+      "enter_password": "Passwort eingeben",
+      "enter_username": "Benutzernamen eingeben",
+      "username": "Benutzername",
+      "password": "Passwort",
+      "without_email": "Ich habe keine E-Mail",
+      "invalidPassword": "Ihr Benutzername oder Passwort ist falsch",
+      "redirectUrl": "Será redirigido a la url de su empresa. ",
+      "lockedAccount": "Gesperrtes Konto. Bitte kontaktieren Sie den Support.",
+      "expiredPassword": "Ihr Passwort ist abgelaufen. Klicken Sie bitte auf die Schaltfläche „Haben Sie Ihr Passwort vergessen?“, um es zu aktualisieren.",
+      "inactiveAccount": "Gelöschtes Konto. Bitte kontaktieren Sie den Support",
+      "passwordNotEmpty": "Passwort-Feld darf nicht leer sein",
+      "passwordNotMatch": "Passwörter stimmen nicht überein",
+      "error": "Interner Fehler, bitte versuchen Sie es später noch einmal",
+      "poweredBy": "Powered by",
+      "previouslyUsedPassword": "Sie haben dieses Passwort bereits zuvor verwendet, bitte wählen Sie ein anderes.",
+      "errorOnUpdatePasswordNew": "Die Aktualisierung des Passworts ist fehlgeschlagen",
+      "btnKeycloak": "Ingresar utilizando Keycloak"
+    }
+  }
+}

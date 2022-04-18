@@ -1,0 +1,47 @@
+{
+  "langs": {
+    "en": "English",
+    "es": "Spanish",
+    "fr": "French",
+    "pt": "Portuguese",
+    "de": "German",
+    "pl": "Polish"
+  },
+  "login": {
+    "newLogin": {
+      "subdomain": {
+        "changeEnterpriseBtn": "Change company",
+        "helpButton": "What is a company domain?",
+        "inputEmpty": "This field cannot be empty",
+        "inputMessage": "The domain name does not exist",
+        "label": "Enter your company's domain name",
+        "placeholder": "mycompany",
+        "sendButton": "Continue"
+      }
+    },
+    "formLogin": {
+      "enter_password": "Enter password",
+      "enter_username": "Enter username",
+      "without_email": "I don't have an email",
+      "username": "Username",
+      "password": "Password",
+      "btnGoogle": "Sign in using Google",
+      "btnSend": "Sign in",
+      "forgotPass": "Forgot your password?",
+      "sms_code": "Enter via SMS code",
+      "invalidPassword": "Your username or password are incorrect",
+      "redirectUrl": "You will be redirect to your company's url.",
+      "lockedAccount": "Blocked account. Please contact support.",
+      "inactiveAccount": "Canceled account. Please contact support",
+      "passwordNotEmpty": "Password field cannot be empty",
+      "passwordNotMatch": "Passwords do not match",
+      "error": "internal error. Please try again later",
+      "btnAzureAd": "Enter using Azure Active Directory",
+      "poweredBy": "Powered by",
+      "previouslyUsedPassword": "You have already used this password before. Please try with another.",
+      "expiredPassword": "Your password has expired. To update your password, click the \"Forgot your password?\" button.",
+      "errorOnUpdatePasswordNew": "Error updating password",
+      "btnKeycloak": "Ingresar utilizando Keycloak"
+    }
+  }
+}

@@ -11,6 +11,7 @@ import {
 import styles from './Input.template.style';
 
 interface Props {
+  fieldName?: string;
   value: string;
   onChange: any;
   placeholder?: string;
@@ -18,9 +19,15 @@ interface Props {
   preffix?: string;
   suffix?: string;
   noEnpty?: boolean;
+  password?: boolean;
+  onSubmit?: (argument?: any) => void;
+  dataToSubmit?: any;
+  autoCapitalize?: 'none' | 'sentences' | 'words' | 'characters';
+  noEnptyMessage?: string;
 }
 
 const Input: React.FC<Props> = ({
+  fieldName,
   value,
   onChange,
   placeholder,
@@ -28,8 +35,13 @@ const Input: React.FC<Props> = ({
   preffix,
   suffix,
   noEnpty,
+  password,
+  onSubmit,
+  dataToSubmit,
+  autoCapitalize,
+  noEnptyMessage,
 }) => {
-  const [isFocused, setIsFocused] = useState(false); /* TODO: Añadir tipado */
+  const [isFocused, setIsFocused] = useState<boolean>(false);
   let isError = false;
 
   if (isFocused && noEnpty && !value.length) {
@@ -45,28 +57,47 @@ const Input: React.FC<Props> = ({
     }
     return styles.inputContainer;
   };
+  const handleChangeInput = (e: string) => {
+    if (fieldName) {
+      return onChange({fieldName, value: e});
+    }
+    return onChange(e);
+  };
+
+  const handleSubmit = () => {
+    if (onSubmit && !isError) {
+      if (dataToSubmit && onSubmit) {
+        onSubmit(dataToSubmit);
+      }
+      onSubmit();
+    }
+  };
 
   return (
     <SafeAreaView>
       <View style={getClassNames()}>
         {preffix && <Text style={styles.preffix}>{preffix}</Text>}
         <TextInput
-          onChangeText={onChange}
+          onChangeText={handleChangeInput}
           value={value}
           placeholder={placeholder}
           keyboardType={keyboardType}
           style={styles.input}
           underlineColorAndroid="transparent"
-          onFocus={() => setIsFocused(!isFocused)}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
+          secureTextEntry={password}
+          blurOnSubmit={false}
+          onSubmitEditing={handleSubmit}
+          autoCapitalize={autoCapitalize}
         />
         {suffix && <Text style={styles.suffix}>{suffix}</Text>}
       </View>
-      {isError && (
+      {isError && isFocused && (
         <View style={styles.errorMessageContainer}>
           <FontAwesomeIcon icon={faTimesCircle} size={12} color={'#ec5b56'} />
-          <Text style={styles.errorMessageText}>
-            El campo no puede ir vacio.
-          </Text>
+
+          <Text style={styles.errorMessageText}>{noEnptyMessage}</Text>
         </View>
       )}
     </SafeAreaView>

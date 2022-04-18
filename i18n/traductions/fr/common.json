@@ -1,0 +1,47 @@
+{
+  "langs": {
+    "en": "Anglais",
+    "es": "Espagnol",
+    "fr": "Français",
+    "pt": "Portugais",
+    "de": "Alemán",
+    "pl": "Polaco"
+  },
+  "login": {
+    "newLogin": {
+      "subdomain": {
+        "changeEnterpriseBtn": "Changer d'entreprise",
+        "helpButton": "Quel est le domaine de votre entreprise?",
+        "inputEmpty": "Le champ ne peut être vide",
+        "inputMessage": "Le nom de domaine saisi n'existe pas",
+        "label": "Entrez le domaine de l'entreprise",
+        "placeholder": "Monentreprise",
+        "sendButton": "Continuer"
+      }
+    },
+    "formLogin": {
+      "enter_password": "Entrez votre mot de passe",
+      "enter_username": "Entrez le nom d'utilisateur",
+      "username": "Utilisateur",
+      "password": "Mot de passe",
+      "btnGoogle": "Se connecter avec google",
+      "btnSend": "Se connecter",
+      "forgotPass": "Vous avez oublié votre mot de passe?",
+      "sms_code": "Entrez via le code de vérification envoyé par SMS",
+      "without_email": "Je n'ai pas d'adresse électronique",
+      "invalidPassword": "Votre identifiant et/ou votre mot de passe est incorrect.",
+      "redirectUrl": "You will be redirect to your company's url. ",
+      "lockedAccount": "Compte bloqué. S'il vous plaît contacter le support",
+      "inactiveAccount": "Compte annulé S'il vous plaît contacter le support",
+      "passwordNotEmpty": "Un mot de passe doit être entré",
+      "passwordNotMatch": "Les mots de passe ne sont pas identiques",
+      "error": "Erreur du système, nous vous invitons à vous reconnecter ultérieurement.",
+      "btnAzureAd": "Ingresar utilizando Azure Active Directory",
+      "poweredBy": "Potenciado por",
+      "previouslyUsedPassword": "Ya has utilizado esta contraseña anteriormente, por favor intenta con otra.",
+      "expiredPassword": "Tu contraseña ha expirado. Para actualizar tu contraseña haz click en el botón \"¿Olvidaste tu contraseña?\".",
+      "errorOnUpdatePasswordNew": "Error updating password",
+      "btnKeycloak": "Ingresar utilizando Keycloak"
+    }
+  }
+}

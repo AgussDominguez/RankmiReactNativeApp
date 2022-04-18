@@ -1,0 +1,47 @@
+{
+  "langs": {
+    "en": "Angielski",
+    "es": "Hiszpański",
+    "fr": "Francuski",
+    "pt": "Portugalski",
+    "de": "German",
+    "pl": "Polskie"
+  },
+  "login": {
+    "newLogin": {
+      "subdomain": {
+        "changeEnterpriseBtn": "Zmień firma",
+        "helpButton": "Czym jest władza firma?",
+        "inputEmpty": "To pole nie może być puste",
+        "inputMessage": "Nazwa domeny nie istnieje",
+        "label": "Wpisz nazwę domeny swojej firmy",
+        "placeholder": "Moja firma",
+        "sendButton": "Kontyntynuj"
+      }
+    },
+    "formLogin": {
+      "enter_password": "Wprowadź hasło",
+      "enter_username": "Wprowadź nazwę użytkownika",
+      "without_email": "Nie mam adresu e-mail",
+      "username": "Nazwa użytkownika",
+      "password": "Hasło",
+      "btnGoogle": "Zaloguj się za pomocą Google",
+      "btnSend": "Zaloguj się",
+      "forgotPass": "Zapomniałeś hasła?",
+      "sms_code": "Wprowadź za pomocą kodu SMS",
+      "invalidPassword": "Twoja nazwa użytkownika lub hasło są nieprawidłowe",
+      "redirectUrl": "You will be redirect to your company's url. ",
+      "lockedAccount": "Konto zablokowane. Prosimy o kontakt z działem wsparcia.",
+      "inactiveAccount": "Konto anulowane. Prosimy o kontakt z działem wsparcia",
+      "passwordNotEmpty": "Pole hasła nie może być puste",
+      "passwordNotMatch": "Hasła nie pasują do siebie",
+      "error": "błąd wewnętrzny, prosimy spróbować ponownie później",
+      "btnAzureAd": "Zaloguj się za pomocą Azure Active Directory",
+      "poweredBy": "Obsugiwane przez",
+      "previouslyUsedPassword": "To hasło było już wcześniej używane, użyj innego.",
+      "expiredPassword": "Twoje hasło straciło ważność. Aby zaktualizować hasło, kliknij przycisk „Zapomniałeś hasła?”",
+      "errorOnUpdatePasswordNew": "Aktualizacja hasła zakończona niepowodzeniem",
+      "btnKeycloak": "Ingresar utilizando Keycloak"
+    }
+  }
+}

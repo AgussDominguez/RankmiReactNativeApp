@@ -1,0 +1,47 @@
+{
+  "langs": {
+    "en": "inglês",
+    "es": "espanhol",
+    "fr": "francês",
+    "pt": "Português",
+    "de": "alemão",
+    "pl": "polonês"
+  },
+  "login": {
+    "newLogin": {
+      "subdomain": {
+        "changeEnterpriseBtn": "Mudar empresa",
+        "helpButton": "Qual é o domínio da empresa?",
+        "inputEmpty": "O campo não pode ficar vazio",
+        "inputMessage": "O nome do domínio admitido não existe",
+        "label": "Digite o domínio da empresa",
+        "placeholder": "minhaempresa",
+        "sendButton": "Continuar"
+      }
+    },
+    "formLogin": {
+      "enter_password": "Digite a senha",
+      "enter_username": "Digite o nome de usuário",
+      "username": "Usuário",
+      "password": "Senha",
+      "without_email": "Eu não tenho email",
+      "btnGoogle": "Faça login usando o Google",
+      "btnSend": "Acessar",
+      "forgotPass": "Esqueceu sua senha?",
+      "sms_code": "Digite via SMS.",
+      "invalidPassword": "Seu usuário e / ou chave estão incorretos",
+      "lockedAccount": "Conta bloqueada. Entre em contato com o suporte",
+      "inactiveAccount": "Conta cancelada Entre em contato com o suporte",
+      "passwordNotEmpty": "O campo senha deve ser preenchido",
+      "passwordNotMatch": "As duas senhas precisam ser idênticas",
+      "error": "Erro no sistema, por favor tente mais tarde",
+      "btnAzureAd": "Login usando o Azure Active Directory",
+      "poweredBy": "Potenciado por",
+      "previouslyUsedPassword": "Você já usou esta senha anteriormente, por favor, tente outra.",
+      "expiredPassword": "Sua senha expirou. Para atualizar sua senha, clique no botão \"Esqueceu sua senha?\"",
+      "redirectUrl": "Será redirecionado para o URL da sua empresa.",
+      "errorOnUpdatePasswordNew": "Erro ao atualizar a senha.",
+      "btnKeycloak": "Entre usando KeyCloak."
+    }
+  }
+}

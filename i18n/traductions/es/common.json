@@ -1,0 +1,47 @@
+{
+  "langs": {
+    "es": "Español",
+    "en": "Inglés",
+    "pt": "Portugués",
+    "fr": "Francés",
+    "de": "Alemán",
+    "pl": "Polaco"
+  },
+  "login": {
+    "newLogin": {
+      "subdomain": {
+        "label": "Ingresar dominio de empresa",
+        "placeholder": "miempresa",
+        "sendButton": "Continuar",
+        "helpButton": "¿Qué es el dominio de empresa?",
+        "inputMessage": "El nombre de dominio ingresado no existe",
+        "inputEmpty": "El campo no puede ir vacio",
+        "changeEnterpriseBtn": "Cambiar de empresa"
+      }
+    },
+    "formLogin": {
+      "btnSend": "Ingresar",
+      "btnGoogle": "Ingresar utilizando Google",
+      "btnKeycloak": "Ingresar utilizando Keycloak",
+      "btnAzureAd": "Ingresar utilizando Azure AD",
+      "forgotPass": "¿Olvidaste tu contraseña?",
+      "sms_code": "Ingresar a través de código SMS",
+      "enter_password": "Ingrese contraseña",
+      "enter_username": "Ingrese nombre de usuario",
+      "username": "Usuario",
+      "password": "Contraseña",
+      "without_email": "No tengo correo",
+      "invalidPassword": "Su usuario y/o clave son incorrectas.",
+      "redirectUrl": "Será redirigido a la url de su empresa. ",
+      "lockedAccount": "Cuenta bloqueada. Por favor contacte a soporte",
+      "expiredPassword": "Tu contraseña ha expirado. Para actualizar tu contraseña haz click en el botón \"¿Olvidaste tu contraseña?\".",
+      "inactiveAccount": "Cuenta cancelada. Por favor contacte a soporte",
+      "passwordNotEmpty": "La contraseña no puede estar vacia",
+      "passwordNotMatch": "Las contraseñas no coinciden",
+      "error": "Error interno, por favor intentelo mas tarde",
+      "errorOnUpdatePasswordNew": "Error al actualizar la contraseña",
+      "poweredBy": "Potenciado por",
+      "previouslyUsedPassword": "Ya has utilizado esta contraseña anteriormente, por favor intenta con otra."
+    }
+  }
+}
